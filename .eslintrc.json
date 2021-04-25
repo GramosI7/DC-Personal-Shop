@@ -5,6 +5,7 @@
     "eslint:recommended", // Extend permet d'utiliser toutes les regles
     "plugin:react/recommended", // Plugin permet d'utiliser certaines regles a ajouter dans rules
     "plugin:@typescript-eslint/recommended",
+    "plugin:jsx-a11y/recommended",
     "prettier"
   ],
   "env": {
