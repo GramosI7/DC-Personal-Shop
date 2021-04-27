@@ -1,17 +1,8 @@
-import { ReactElement } from "react";
+import Head from 'next/head'
+import Image from 'next/image'
 
-import Head from "next/head";
-import Image from "next/image";
-
-// Components
-import { Navbar } from "@components/core";
-import { Button } from "@components/ui";
-import { Like } from "@icons/index";
-
-export const Home = (): ReactElement => (
+export const Home = (): JSX.Element => (
   <div className="container">
-    <Navbar />
-    <Like />
     <Head>
       <title>Create Next App</title>
       <link rel="icon" href="/favicon.ico" />
@@ -28,7 +19,7 @@ export const Home = (): ReactElement => (
 
       <button
         onClick={() => {
-          window.alert("With typescript and Jest");
+          window.alert('With typescript and Jest')
         }}
       >
         Test Button
@@ -45,7 +36,10 @@ export const Home = (): ReactElement => (
           <p>Learn about Next.js in an interactive course with quizzes!</p>
         </a>
 
-        <a href="https://github.com/vercel/next.js/tree/master/examples" className="card">
+        <a
+          href="https://github.com/vercel/next.js/tree/master/examples"
+          className="card"
+        >
           <h3>Examples &rarr;</h3>
           <p>Discover and deploy boilerplate example Next.js projects.</p>
         </a>
@@ -58,7 +52,6 @@ export const Home = (): ReactElement => (
           <p>Instantly deploy your Next.js site to a public URL with Vercel.</p>
         </a>
       </div>
-      <Button />
     </main>
 
     <footer>
@@ -67,7 +60,8 @@ export const Home = (): ReactElement => (
         target="_blank"
         rel="noopener noreferrer"
       >
-        Powered by <Image src="/vercel.svg" alt="Vercel Logo" height={"32"} width={"64"} />
+        Powered by{' '}
+        <Image src="/vercel.svg" alt="Vercel Logo" height={'32'} width={'64'} />
       </a>
     </footer>
 
@@ -146,8 +140,8 @@ export const Home = (): ReactElement => (
         border-radius: 5px;
         padding: 0.75rem;
         font-size: 1.1rem;
-        font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-          Bitstream Vera Sans Mono, Courier New, monospace;
+        font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
+          DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
       }
 
       .grid {
@@ -155,6 +149,7 @@ export const Home = (): ReactElement => (
         align-items: center;
         justify-content: center;
         flex-wrap: wrap;
+
         max-width: 800px;
         margin-top: 3rem;
       }
@@ -202,8 +197,8 @@ export const Home = (): ReactElement => (
       body {
         padding: 0;
         margin: 0;
-        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
-          Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+          Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
       }
 
       * {
@@ -211,6 +206,6 @@ export const Home = (): ReactElement => (
       }
     `}</style>
   </div>
-);
+)
 
-export default Home;
+export default Home
