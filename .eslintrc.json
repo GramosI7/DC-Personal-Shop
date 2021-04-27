@@ -2,12 +2,10 @@
   "parser": "@typescript-eslint/parser",
   "plugins": ["@typescript-eslint"],
   "extends": [
-    "eslint:recommended",
-    "plugin:react/recommended",
-    "plugin:@typescript-eslint/recommended"
-    // Uncomment the following lines to enable eslint-config-prettier
-    // Is not enabled right now to avoid issues with the Next.js repo
-    // "prettier",
+    "eslint:recommended", // Extend permet d'utiliser toutes les regles
+    "plugin:react/recommended", // Plugin permet d'utiliser certaines regles a ajouter dans rules
+    "plugin:@typescript-eslint/recommended",
+    "prettier"
   ],
   "env": {
     "es6": true,
