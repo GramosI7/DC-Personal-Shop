@@ -1,5 +1,5 @@
-import { ReactElement } from 'react'
+import { ReactElement } from "react";
 
 export default function Button(): ReactElement {
-  return <button type="button">Button</button>
+  return <button type="button">Button</button>;
 }
