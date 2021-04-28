@@ -20,7 +20,6 @@
       "@context/*": ["context/*"],
       "@hooks/*": ["hooks/*"],
       "@styles/*": ["styles/*"],
-      "@public/*": ["public/*"],
       "@lib/*": ["lib/*"],
       "@icons/*": ["components/icons/*"],
       "@root/*": ["./*"],
