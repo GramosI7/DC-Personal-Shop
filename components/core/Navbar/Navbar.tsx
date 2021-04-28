@@ -1,4 +1,4 @@
-import { ReactElement } from 'react'
+import { ReactElement } from "react";
 
 export default function Navbar(): ReactElement {
   return (
@@ -9,5 +9,5 @@ export default function Navbar(): ReactElement {
         <li>Contact</li>
       </ul>
     </nav>
-  )
+  );
 }
