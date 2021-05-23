@@ -1,14 +1,14 @@
-const defaultTheme = require("tailwindcss/defaultTheme");
-
 module.exports = {
   purge: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
-    fontFamily: {
-      // display: ["Tenor Sans", "Georgia", "serif"],
-      // body: ["Inter", "system-ui", "sans-serif"],
-      sans: ["Roboto", "Helvetica", ...defaultTheme.fontFamily.sans]
+    extend: {
+      backgroundImage: () => ({
+        "men-home":
+          "linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/images/bg-home-men.png')",
+        "girl-home":
+          "linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/images/bg-home-girl.png')"
+      })
     },
     colors: {
       gray: {
