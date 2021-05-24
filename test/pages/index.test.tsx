@@ -2,7 +2,7 @@ import React from "react";
 import { render } from "../testUtils";
 import Home from "@pages/index.page";
 
-const allProducts = [
+const allCategories = [
   {
     gender: "Homme",
     categories: [
@@ -34,7 +34,7 @@ describe("Home page", () => {
   // })
 
   it("Should show the categories gender Homme and Femme", () => {
-    const { getByText } = render(<Home allProducts={allProducts} />, {});
+    const { getByText } = render(<Home allCategories={allCategories} />, {});
 
     expect(getByText("Homme")).toBeInTheDocument();
     expect(getByText("Femme")).toBeInTheDocument();
