@@ -8,11 +8,6 @@ import Link from "next/link";
 import { getAllProductGategorieUnivers } from "@lib/prismic/api";
 // import { Link } from "prismic-reactjs";
 
-// // Components
-// import { Navbar } from "@components/core";
-// import { Button } from "@components/ui";
-// import { Like } from "@icons/index";
-
 export default function Home({ allProducts }): ReactElement {
   return (
     <div className="bg-gray-200">

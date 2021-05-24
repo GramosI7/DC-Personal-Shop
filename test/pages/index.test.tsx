@@ -1,6 +1,31 @@
 import React from "react";
-import { render, fireEvent } from "../testUtils";
+import { render } from "../testUtils";
 import Home from "@pages/index.page";
+
+const allProducts = [
+  {
+    gender: "Homme",
+    categories: [
+      {
+        text: "Prêt-à-porter",
+        href: "Pr%C3%AAt-%C3%A0-porter"
+      }
+    ]
+  },
+  {
+    gender: "Femme",
+    categories: [
+      {
+        text: "Prêt-à-porter",
+        href: "Pr%C3%AAt-%C3%A0-porter"
+      },
+      {
+        text: "Chaussures",
+        href: "Chaussures"
+      }
+    ]
+  }
+];
 
 describe("Home page", () => {
   // it('matches snapshot', () => {
@@ -8,10 +33,10 @@ describe("Home page", () => {
   //   expect(asFragment()).toMatchSnapshot()
   // })
 
-  it("clicking button triggers alert", () => {
-    const { getByText } = render(<Home />, {});
-    window.alert = jest.fn();
-    fireEvent.click(getByText("Test Button"));
-    expect(window.alert).toHaveBeenCalledWith("With typescript and Jest");
+  it("Should show the categories gender Homme and Femme", () => {
+    const { getByText } = render(<Home allProducts={allProducts} />, {});
+
+    expect(getByText("Homme")).toBeInTheDocument();
+    expect(getByText("Femme")).toBeInTheDocument();
   });
 });
