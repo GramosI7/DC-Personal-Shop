@@ -6,9 +6,20 @@ import Link from "next/link";
 
 // Lib
 import { getAllProductGategorieUnivers } from "@lib/prismic/api";
-// import { Link } from "prismic-reactjs";
 
-export default function Home({ allProducts }): ReactElement {
+interface GenderCategories {
+  gender: string;
+  categories: {
+    text: string;
+    href: string;
+  }[];
+}
+
+interface Props {
+  allCategories: GenderCategories[];
+}
+
+export default function Home({ allCategories }: Props): ReactElement {
   return (
     <div className="bg-gray-200">
       <Head>
@@ -28,11 +39,11 @@ export default function Home({ allProducts }): ReactElement {
               <li className="text-3xl mb-4">
                 <Link href="/homme">
                   <a href="/homme" className="text-gray-50 no-underline hover:underline">
-                    {allProducts[0].gender}
+                    {allCategories[0].gender}
                   </a>
                 </Link>
               </li>
-              {allProducts[0].categories.map(({ text, href }) => (
+              {allCategories[0].categories.map(({ text, href }) => (
                 <li className="mb-2" key={text}>
                   <Link href={`homme/${href}`}>
                     <a href={`homme/${href}`} className="text-gray-50 no-underline hover:underline">
@@ -49,11 +60,11 @@ export default function Home({ allProducts }): ReactElement {
               <li className="text-3xl mb-4">
                 <Link href="/women">
                   <a href="/women" className="text-gray-50 no-underline hover:underline">
-                    {allProducts[1].gender}
+                    {allCategories[1].gender}
                   </a>
                 </Link>
               </li>
-              {allProducts[1].categories.map(({ text, href }) => (
+              {allCategories[1].categories.map(({ text, href }) => (
                 <li className="mb-2" key={text}>
                   <Link href={`/femme/${href}`}>
                     <a
@@ -74,8 +85,8 @@ export default function Home({ allProducts }): ReactElement {
 }
 
 export const getStaticProps: GetStaticProps = async ({ preview = false, previewData }) => {
-  const allProducts = await getAllProductGategorieUnivers(previewData);
+  const allCategories = await getAllProductGategorieUnivers(previewData);
   return {
-    props: { preview, allProducts }
+    props: { preview, allCategories }
   };
 };
