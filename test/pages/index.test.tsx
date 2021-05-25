@@ -28,15 +28,22 @@ const allCategories = [
 ];
 
 describe("Home page", () => {
-  // it('matches snapshot', () => {
-  //   const { asFragment } = render(<Home />, {})
-  //   expect(asFragment()).toMatchSnapshot()
-  // })
+  it("matches snapshot", () => {
+    const { asFragment } = render(<Home allCategories={allCategories} />, {});
+    expect(asFragment()).toMatchSnapshot();
+  });
 
   it("Should show the categories gender Homme and Femme", () => {
     const { getByText } = render(<Home allCategories={allCategories} />, {});
 
     expect(getByText("Homme")).toBeInTheDocument();
     expect(getByText("Femme")).toBeInTheDocument();
+  });
+
+  it("Should show the categories Univers", () => {
+    const { getByText, getAllByText } = render(<Home allCategories={allCategories} />, {});
+
+    expect(getAllByText("Prêt-à-porter")).toHaveLength(2);
+    expect(getByText("Chaussures")).toBeInTheDocument();
   });
 });

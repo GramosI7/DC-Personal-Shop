@@ -1,0 +1,89 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home page matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="bg-gray-200"
+  >
+    <main
+      class="container mx-auto px-2 text-center h-screen"
+    >
+      <div
+        class="h-full grid grid-cols-2 text-gray-50"
+      >
+        <h1
+          class="text-5xl absolute top-32 left-1/2 transform -translate-x-1/2"
+        >
+          DC
+          <br />
+          Personal Shop
+        </h1>
+        <div
+          class="flex place-items-center justify-center bg-men-home bg-no-repeat bg-center bg-cover"
+        >
+          <ul>
+            <li
+              class="text-3xl mb-4"
+            >
+              <a
+                class="text-gray-50 no-underline hover:underline"
+                href="/homme"
+              >
+                Homme
+              </a>
+            </li>
+            <li
+              class="mb-2"
+            >
+              <a
+                class="text-gray-50 no-underline hover:underline"
+                href="homme/Pr%C3%AAt-%C3%A0-porter"
+              >
+                Prêt-à-porter
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div
+          class="flex place-items-center justify-center bg-girl-home bg-no-repeat bg-center bg-cover"
+        >
+          <ul
+            class="text-gray-50"
+          >
+            <li
+              class="text-3xl mb-4"
+            >
+              <a
+                class="text-gray-50 no-underline hover:underline"
+                href="/women"
+              >
+                Femme
+              </a>
+            </li>
+            <li
+              class="mb-2"
+            >
+              <a
+                class="text-gray-50 no-underline hover:underline"
+                href="/femme/Pr%C3%AAt-%C3%A0-porter"
+              >
+                Prêt-à-porter
+              </a>
+            </li>
+            <li
+              class="mb-2"
+            >
+              <a
+                class="text-gray-50 no-underline hover:underline"
+                href="/femme/Chaussures"
+              >
+                Chaussures
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </main>
+  </div>
+</DocumentFragment>
+`;
