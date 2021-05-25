@@ -1,4 +1,5 @@
-import { render } from "@testing-library/react";
+import { ReactElement } from "react";
+import { render, RenderOptions, RenderResult } from "@testing-library/react";
 import "@testing-library/jest-dom/extend-expect";
 // import { ThemeProvider } from "my-ui-lib"
 // import { TranslationProvider } from "my-i18n-lib"
@@ -15,10 +16,10 @@ const Providers = ({ children }) => {
   // )
 };
 
-const customRender = (ui, options = {}) => render(ui, { wrapper: Providers, ...options });
+const customRender = (ui: ReactElement, options?: Omit<RenderOptions, "queries">): RenderResult =>
+  render(ui, { wrapper: Providers, ...options });
 
 // re-export everything
 export * from "@testing-library/react";
-
 // override render method
 export { customRender as render };
