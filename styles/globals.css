@@ -12,5 +12,5 @@
 
 /* custom styles */
 a {
-  @apply text-primary-400 underline;
+  @apply text-tundora-400 underline;
 }
